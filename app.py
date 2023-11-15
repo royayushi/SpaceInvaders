@@ -1,7 +1,9 @@
 from flask import Flask, send_file, request
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/download')
 def download_game():
